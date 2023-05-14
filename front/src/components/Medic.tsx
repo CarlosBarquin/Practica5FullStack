@@ -2,6 +2,13 @@ import { gql, useMutation} from "@apollo/client";
 import { useState } from "react";
 import styled from "styled-components";
 
+//addSlot y removeSlot se hacen en CSR ya que los datos se introducen por inputs que establece el cliente y no por una url
+//Realizar las operaciones en el cliente es mejor porque no se tiene que esperar a que el servidor responda
+//y se puede hacer de forma asincrona
+//puedes actualizar la pagina sin tener que esperar a que el servidor responda
+
+
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;

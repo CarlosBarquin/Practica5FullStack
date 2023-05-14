@@ -3,6 +3,10 @@ import { gql, useMutation, useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
+//book_slot y get_available_slots se hacen en CSR ya que los datos se introducen por inputs que establece el cliente y no por una url
+//Realizar las operaciones en el cliente es mejor porque no se tiene que esperar a que el servidor responda
+//get_available_slots se podria hacer en SSR pero es mejor CSR porque los datos son staticos y es mas sencillo a la hora de pasar los parametros 
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
