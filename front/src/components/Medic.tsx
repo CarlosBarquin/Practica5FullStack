@@ -70,7 +70,7 @@ const pagina = () => {
     const [addSlot] = useMutation(ADD_SLOT, {
         variables: { year: year, month: month, day: day, hour: hour},
         onCompleted: () => {
-            alert("Slot creado");
+            alert("Slot fue creado");
         },
         onError: () => {
             alert("Slot ya existe");
